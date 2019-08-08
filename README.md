@@ -27,6 +27,7 @@ Install Microsoft SQL Server
 		Right click on the current server -> Properties -> Security 
 
 4 - Run the aplication and login with the username and id saved on database.
+
 	For Student:
 	Username: 1234
 	Password: 1234
