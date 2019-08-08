@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{021B2C80-8A9F-46C1-96C0-68BECC4E54C5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>StudyRoomBooking</RootNamespace>
+    <AssemblyName>StudyRoomBooking</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DatabaseHelper.cs" />
+    <Compile Include="Entity\Booking.cs" />
+    <Compile Include="Entity\Building.cs" />
+    <Compile Include="Entity\Room.cs" />
+    <Compile Include="Entity\Student.cs" />
+    <Compile Include="StudyRoomBookingDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudyRoomBookingDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StudyRoomBookingDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudyRoomBookingDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\AdminForms\AdminBookingOptins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\AdminForms\AdminBookingOptins.Designer.cs">
+      <DependentUpon>AdminBookingOptins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\LoginWindow\LoginWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\LoginWindow\LoginWindow.Designer.cs">
+      <DependentUpon>LoginWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\StudentForms\StudentBookingOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\StudentForms\StudentBookingOptionsForm.Designer.cs">
+      <DependentUpon>StudentBookingOptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UserInterface\AdminForms\AdminBookingOptins.resx">
+      <DependentUpon>AdminBookingOptins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\LoginWindow\LoginWindow.resx">
+      <DependentUpon>LoginWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\StudentForms\StudentBookingOptionsForm.resx">
+      <DependentUpon>StudentBookingOptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="StudyRoomBookingDataSet4.xsc">
+      <DependentUpon>StudyRoomBookingDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="StudyRoomBookingDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudyRoomBookingDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StudyRoomBookingDataSet4.xss">
+      <DependentUpon>StudyRoomBookingDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="StudyRoomBookingDataSet6.xsc">
+      <DependentUpon>StudyRoomBookingDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="StudyRoomBookingDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudyRoomBookingDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StudyRoomBookingDataSet6.xss">
+      <DependentUpon>StudyRoomBookingDataSet6.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\videoblocks-flying-clocks-with-fast-changing-time-on-white-background-looped_hgt4zenuz_thumbnail-full04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroungImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroungImg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroungImg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroungImg3.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
