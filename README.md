@@ -17,7 +17,7 @@ Install Microsoft SQL Server
  3-Right click on the StudentRoomBooking database and go to properties.
 	On the left side, click Permissions.
 	Under User Roles, click project3300
-	Under Permissions for 3300, grant the necessary permissions that we will need to
+	Under Permissions for 3300, grant the necessary permissions that you will need to
 	 access and modify the database
 	Click ok
 
